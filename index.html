@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="tst - Professional website">
+  <meta name="generator" content="Website Generator">
+  <meta name="theme-color" content="hsl(270, 86%, 40%)">
+  <title>tst</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+      /* Creative Style - Playful elements with dynamic animations */
+      body{font-family:'Poppins', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+      h1,h2,h3,h4,h5,h6{font-family:'Poppins', sans-serif}
+      section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
+      header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;min-height:500px;display:flex;align-items:center}
+      [data-animate]{opacity:0;transform:scale(.94);transition:opacity .6s ease-out,transform .6s cubic-bezier(.175,.885,.32,1.275)}[data-animate].visible{opacity:1;transform:scale(1)}
+      .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.1);transition:all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6);width:100%}
+      ::-webkit-scrollbar{width:12px;height:12px}::-webkit-scrollbar-track{background:#f5f5f5}::-webkit-scrollbar-thumb{background:hsl(270, 86%, 40%);border-radius:20px}::-webkit-scrollbar-thumb:hover{background:hsl(270, 86%, 50%)}
+      body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,hsl(270, 86%, 60%),hsl(270, 86%, 40%),hsl(270, 86%, 20%));transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+      @media print{[data-animate]{opacity:1;transform:none}}
+  </style>
+  
+  <script>
+      tailwind.config={theme:{extend:{colors:{primary:{"50":"hsl(270, 86%, 95%)","100":"hsl(270, 86%, 90%)","200":"hsl(270, 86%, 80%)","300":"hsl(270, 86%, 70%)","400":"hsl(270, 86%, 60%)","500":"hsl(270, 86%, 50%)","600":"hsl(270, 86%, 40%)","700":"hsl(270, 86%, 30%)","800":"hsl(270, 86%, 20%)","900":"hsl(270, 86%, 10%)"}},fontFamily:{sans:[''Poppins'','system-ui','sans-serif'],heading:[''Poppins'','sans-serif']}}}}
+  </script>
+</head>
+<body class="antialiased text-gray-800">
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="/" class="flex-shrink-0">
+                    <span class="font-bold text-xl text-blue-600">TST Civil Engineering</span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="/" class="text-blue-800 hover:bg-blue-100 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+                        <a href="/about" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="/services" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="/projects" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="/contact" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-4 flex items-center md:ml-6">
+                    <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium">Get a Quote</a>
+                </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Heroicon name: outline/menu
+
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!--
+                      Heroicon name: outline/x
+
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="text-blue-800 hover:bg-blue-100 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+            <a href="/about" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+            <a href="/services" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+            <a href="/projects" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="/contact" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+        <div class="pt-4 pb-3 border-t border-gray-200">
+            <div class="mt-3 px-2 space-y-1">
+                <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Get a Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle the icon
+                const menuIcon = mobileMenuButton.querySelector('svg:first-child');
+                const closeIcon = mobileMenuButton.querySelector('svg:last-child');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        });
+    </script>
+</nav>
+  <main>
+      
+<!-- NAV SECTION -->
+
+
+<!-- HEADER SECTION -->
+<header class="relative bg-gray-100">
+    <div class="absolute inset-0">
+        <img src="/images/gbc37fc22eebc7536319265ea846b04bfa35897fa86ad9fd55f1b2e50f7f697a7a170097b1d48993aab13113ebc34a7fcfc83f4fd7af772b4b4de9afad37de7cf_640-1.jpg" alt="Civil Engineering Project" class="h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-orange-500 opacity-70"></div>
+    </div>
+
+    <nav class="relative px-6 py-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-white">TST Engineering</a>
+            <div class="hidden lg:flex space-x-6">
+                <a href="/" class="text-white hover:text-gray-200">Home</a>
+                <a href="/services" class="text-white hover:text-gray-200">Services</a>
+                <a href="/projects" class="text-white hover:text-gray-200">Projects</a>
+                <a href="/about" class="text-white hover:text-gray-200">About Us</a>
+                <a href="/contact" class="text-white hover:text-gray-200">Contact</a>
+            </div>
+            <button class="lg:hidden text-white focus:outline-none" id="mobile-menu-button" data-animate="fade-in">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="lg:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 hover:text-white">Home</a>
+                <a href="/services" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 hover:text-white">Services</a>
+                <a href="/projects" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 hover:text-white">Projects</a>
+                <a href="/about" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 hover:text-white">About Us</a>
+                <a href="/contact" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative py-24 sm:py-32 lg:py-40 text-center text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-extrabold sm:text-5xl lg:text-6xl leading-tight mb-4" data-animate="fade-in-down">
+                Building a Better Future, Together.
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8" data-animate="fade-in">
+                Expert Civil Engineering Solutions for Sustainable Infrastructure.
+            </p>
+            <a href="/contact" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg inline-block" data-animate="fade-in-up">
+                Get a Free Consultation
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</header>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-16 bg-gray-50 overflow-hidden">
+    <div class="container mx-auto px-4">
+        <div class="lg:flex lg:items-center lg:justify-between">
+            <div class="lg:w-1/2" data-animate="fade-right">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    About TST Civil Engineering
+                </h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    TST Civil Engineering is a leading provider of comprehensive civil engineering services. With a proven track record of excellence spanning over 20 years, we are committed to delivering innovative, sustainable, and cost-effective solutions to our clients.
+                </p>
+                <p class="mt-4 text-lg text-gray-700">
+                    Our team of highly skilled and experienced engineers, project managers, and technicians possess the expertise to handle projects of any size and complexity. From initial planning and design to construction and project completion, we provide comprehensive support throughout the entire project lifecycle.
+                </p>
+                <div class="mt-8">
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li><strong>Expertise:</strong> Decades of experience in diverse civil engineering projects.</li>
+                        <li><strong>Innovation:</strong> Cutting-edge technologies and sustainable practices.</li>
+                        <li><strong>Client-Focused:</strong> Tailored solutions to meet specific client needs.</li>
+                        <li><strong>Quality Assurance:</strong> Rigorous quality control processes.</li>
+                        <li><strong>Safety:</strong> Unwavering commitment to safety on every project.</li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" data-animate="slide-in-bottom">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 lg:mt-0 lg:w-1/2" data-animate="fade-left">
+                <img class="w-full rounded-lg shadow-lg object-cover object-center h-96" src="/images/g814433275d946822911d97ca9e02b6cda2d234d0fea330540c11cc20d370740a495f8422134a5d69369e8b9997af0de849cbcb8af65dc6ff1f17ac0464a09bb0_640.jpg" alt="Civil Engineering Project">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto">
+        <div class="text-center mb-16" data-animate="fade-in">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Services</h2>
+            <p class="mt-4 text-lg text-gray-500">We offer a comprehensive range of civil engineering services, tailored to meet your specific needs.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate="slide-in-up">
+
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="/images/g70b296a95a6ad4857b0df1c61cc12a395823b3abfcc15bc6b90f4089a1368867783160b66f4502f29cd332fbe20abd79897a778b7f75067f2ba2413900d7f4ab_640.jpg" alt="Structural Engineering" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Structural Engineering</h3>
+                    <p class="text-gray-600 mb-4">We provide structural design, analysis, and inspection services for a variety of projects, ensuring safety and durability.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500">
+                        <li>Building Design & Analysis</li>
+                        <li>Bridge Inspection & Rehabilitation</li>
+                        <li>Foundation Design</li>
+                        <li>Seismic Analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="/images/ga86c2f6dbe9d0854fa271ddeb507c9bd4ac14c3fae1865ca762350840dce20f5e2b55aae4d2f398cbf1229062d64ec649367a3eace968d3d623f437e9dda2954_640.jpg" alt="Geotechnical Engineering" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Geotechnical Engineering</h3>
+                    <p class="text-gray-600 mb-4">Our geotechnical services include site investigation, soil testing, and foundation design to ensure stable and safe construction.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500">
+                        <li>Soil Investigation & Testing</li>
+                        <li>Slope Stability Analysis</li>
+                        <li>Retaining Wall Design</li>
+                        <li>Foundation Recommendations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="/images/g814433275d946822911d97ca9e02b6cda2d234d0fea330540c11cc20d370740a495f8422134a5d69369e8b9997af0de849cbcb8af65dc6ff1f17ac0464a09bb0_640.jpg" alt="Transportation Engineering" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Transportation Engineering</h3>
+                    <p class="text-gray-600 mb-4">We specialize in the planning, design, and operation of transportation systems to improve efficiency and safety.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500">
+                        <li>Roadway Design & Planning</li>
+                        <li>Traffic Impact Studies</li>
+                        <li>Intersection Design</li>
+                        <li>Pavement Management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://images.unsplash.com/photo-1551721434-8f7249322645?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="Environmental Engineering" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Environmental Engineering</h3>
+                    <p class="text-gray-600 mb-4">We provide environmental assessment, remediation, and compliance services to protect our natural resources.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500">
+                        <li>Environmental Impact Assessments</li>
+                        <li>Stormwater Management</li>
+                        <li>Wastewater Treatment Design</li>
+                        <li>Remediation Services</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://images.unsplash.com/photo-1580582988665-c546069661cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt="Construction Management" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Construction Management</h3>
+                    <p class="text-gray-600 mb-4">Our construction management services ensure projects are completed on time, within budget, and to the highest quality standards.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500">
+                        <li>Project Planning & Scheduling</li>
+                        <li>Cost Control & Budgeting</li>
+                        <li>Quality Assurance</li>
+                        <li>Site Supervision</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="features" class="bg-gray-50 py-16 w-full">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-5xl font-extrabold text-gray-800 mb-4" data-animate="fade-in">
+        Comprehensive Civil Engineering Solutions
+      </h2>
+      <p class="text-gray-600 text-lg lg:text-xl" data-animate="fade-in" data-animate-delay="200">
+        TST delivers innovative and sustainable infrastructure solutions, from concept to completion.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Feature 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-bottom">
+        <img src="/images/g70b296a95a6ad4857b0df1c61cc12a395823b3abfcc15bc6b90f4089a1368867783160b66f4502f29cd332fbe20abd79897a778b7f75067f2ba2413900d7f4ab_640.jpg" alt="Bridge Construction" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Bridge Design & Construction</h3>
+          <p class="text-gray-600">
+            We specialize in the design, construction, and rehabilitation of bridges, ensuring safety, durability, and aesthetic appeal. Our expertise includes various bridge types, from simple spans to complex cable-stayed structures.
+          </p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-bottom" data-animate-delay="100">
+        <img src="/images/ga86c2f6dbe9d0854fa271ddeb507c9bd4ac14c3fae1865ca762350840dce20f5e2b55aae4d2f398cbf1229062d64ec649367a3eace968d3d623f437e9dda2954_640.jpg" alt="Roadway Development" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Roadway & Highway Development</h3>
+          <p class="text-gray-600">
+            From initial planning and design to construction and maintenance, we provide comprehensive roadway and highway development services. We prioritize safety, efficiency, and environmental sustainability in all our projects.
+          </p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-bottom" data-animate-delay="200">
+        <img src="/images/g814433275d946822911d97ca9e02b6cda2d234d0fea330540c11cc20d370740a495f8422134a5d69369e8b9997af0de849cbcb8af65dc6ff1f17ac0464a09bb0_640.jpg" alt="Geotechnical Engineering" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Geotechnical Engineering</h3>
+          <p class="text-gray-600">
+            Our geotechnical engineering services encompass site investigation, soil testing, foundation design, and slope stability analysis. We provide reliable and cost-effective solutions for all types of soil and rock conditions.
+          </p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-bottom">
+        <img src="/images/gbc37fc22eebc7536319265ea846b04bfa35897fa86ad9fd55f1b2e50f7f697a7a170097b1d48993aab13113ebc34a7fcfc83f4fd7af772b4b4de9afad37de7cf_640-1.jpg" alt="Water Resources Management" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Water Resources Management</h3>
+          <p class="text-gray-600">
+            We offer comprehensive water resources management services, including stormwater management, flood control, and water supply infrastructure design. Our solutions are designed to protect communities and the environment.
+          </p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-bottom" data-animate-delay="100">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Construction Management</h3>
+          <p class="text-gray-600">
+            TST provides expert construction management services to ensure projects are completed on time, within budget, and to the highest quality standards. We oversee all aspects of the construction process, from planning and scheduling to cost control and quality assurance.
+          </p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-bottom" data-animate-delay="200">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Land Development & Planning</h3>
+          <p class="text-gray-600">
+            We assist clients with all phases of land development, including site planning, zoning approvals, and infrastructure design. Our team works closely with developers and municipalities to create sustainable and thriving communities.
+          </p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="bg-gray-50 py-16 w-full overflow-hidden" data-animate="fade-in">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-extrabold text-gray-800 text-center mb-8 md:text-4xl lg:text-5xl" data-animate="slide-in-bottom">
+            What Our Clients Say
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full" data-animate="slide-in-left">
+                <div>
+                    <div class="text-gray-600 italic mb-4">
+                        "TST's expertise in structural engineering was invaluable to our project. Their team provided innovative solutions and ensured the highest safety standards were met. We highly recommend their services."
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <img src="https://api.placeholder.co/40/40" alt="John Doe" class="rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-gray-700">John Doe</p>
+                            <p class="text-sm text-gray-500">Project Manager, ABC Construction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-gray-300 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full" data-animate="slide-in-bottom">
+                <div>
+                    <div class="text-gray-600 italic mb-4">
+                        "We were impressed with TST's commitment to sustainable construction practices. They helped us minimize our environmental impact while delivering a high-quality project on time and within budget."
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <img src="https://api.placeholder.co/40/40" alt="Jane Smith" class="rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-gray-700">Jane Smith</p>
+                            <p class="text-sm text-gray-500">CEO, GreenTech Innovations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full" data-animate="slide-in-right">
+                <div>
+                    <div class="text-gray-600 italic mb-4">
+                        "TST provided exceptional project management services for our infrastructure development. Their proactive approach and attention to detail ensured a smooth and successful outcome."
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <img src="https://api.placeholder.co/40/40" alt="David Lee" class="rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-gray-700">David Lee</p>
+                            <p class="text-sm text-gray-500">Director, City Planning Department</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg class="w-6 h-6 text-orange-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 5.19 8.63L-2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+Okay, here's the complete HTML code for the index page of the TST Civil Engineering website, built with Tailwind CSS, following all instructions and creative mandates.  I've focused on creating a visually appealing, responsive, and professional website with realistic content.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TST Civil Engineering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.1/tailwind.min.css" integrity="sha512-9vr+H42y5/zH07Xz0C6r+wQvK3h377Z5l5z6yvXQ1i95z07i5W6jT/k3g+g6Z4W/p2W3Qv0j4J97Q08K7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom Styles (Optional, for things not easily done with Tailwind) */
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)); /* Dark overlay */
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <!-- Header / Hero Section -->
+    <header class="relative bg-cover bg-center h-[500px] md:h-[600px] lg:h-[700px]" style="background-image: url(/images/gbc37fc22eebc7536319265ea846b04bfa35897fa86ad9fd55f1b2e50f7f697a7a170097b1d48993aab13113ebc34a7fcfc83f4fd7af772b4b4de9afad37de7cf_640-1.jpg);">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <nav class="absolute top-0 left-0 w-full py-6 px-4 md:px-8 lg:px-16 flex items-center justify-between text-white z-10">
+            <a href="#" class="text-2xl font-bold">TST Civil Engineering</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-orange-300">Home</a>
+                <a href="#services" class="hover:text-orange-300">Services</a>
+                <a href="#projects" class="hover:text-orange-300">Projects</a>
+                <a href="#about" class="hover:text-orange-300">About Us</a>
+                <a href="#contact" class="hover:text-orange-300">Contact</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        <div class="absolute bottom-0 left-0 w-full p-8 md:p-16 text-white z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" data-animate="fade-in-up">Building a Better Future</h1>
+            <p class="text-lg md:text-xl mb-8" data-animate="fade-in-up" data-animate-delay="200">Expert civil engineering solutions for sustainable infrastructure.</p>
+            <a href="#contact" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300" data-animate="fade-in-up" data-animate-delay="400">Get a Free Quote</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8" data-animate="fade-in">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300" data-animate="fade-in-up">
+                    <i class="fas fa-road text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Road Construction</h3>
+                    <p class="text-gray-700">From highways to local streets, we deliver high-quality road construction and maintenance services.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300" data-animate="fade-in-up" data-animate-delay="200">
+                    <i class="fas fa-building text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Structural Engineering</h3>
+                    <p class="text-gray-700">Designing and analyzing structures for safety, durability, and optimal performance.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300" data-animate="fade-in-up" data-animate-delay="400">
+                    <i class="fas fa-water text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Water Resources</h3>
+                    <p class="text-gray-700">Managing water resources through planning, design, and construction of water and wastewater systems.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300" data-animate="fade-in-up">
+                    <i class="fas fa-city text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Urban Planning</h3>
+                    <p class="text-gray-700">Creating sustainable and livable communities through thoughtful urban planning and design.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300" data-animate="fade-in-up" data-animate-delay="200">
+                    <i class="fas fa-drafting-compass text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Surveying & Mapping</h3>
+                    <p class="text-gray-700">Providing accurate surveying and mapping services for construction and development projects.</p>
+                </div>
+                 <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300" data-animate="fade-in-up" data-animate-delay="400">
+                    <i class="fas fa-hard-hat text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Construction Management</h3>
+                    <p class="text-gray-700">Overseeing construction projects from start to finish, ensuring quality and efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8" data-animate="fade-in">Recent Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in-up">
+                    <img src="/images/g814433275d946822911d97ca9e02b6cda2d234d0fea330540c11cc20d370740a495f8422134a5d69369e8b9997af0de849cbcb8af65dc6ff1f17ac0464a09bb0_640.jpg" alt="Bridge Construction" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Highway Bridge Reconstruction</h3>
+                        <p class="text-gray-700">Complete reconstruction of a major highway bridge, improving safety and traffic flow.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in-up" data-animate-delay="200">
+                    <img src="/images/ga86c2f6dbe9d0854fa271ddeb507c9bd4ac14c3fae1865ca762350840dce20f5e2b55aae4d2f398cbf1229062d64ec649367a3eace968d3d623f437e9dda2954_640.jpg" alt="Water Treatment Plant" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">New Water Treatment Facility</h3>
+                        <p class="text-gray-700">Design and construction of a state-of-the-art water treatment plant for a growing community.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in-up" data-animate-delay="400">
+                    <img src="/images/g70b296a95a6ad4857b0df1c61cc12a395823b3abfcc15bc6b90f4089a1368867783160b66f4502f29cd332fbe20abd79897a778b7f75067f2ba2413900d7f4ab_640.jpg" alt="Urban Development Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Downtown Revitalization Project</h3>
+                        <p class="text-gray-700">Comprehensive urban development project, including new infrastructure and public spaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8" data-animate="fade-in">About Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-animate="fade-in-right">
+                    <img src="/api/placeholder/600/400" alt="TST Team" class="rounded-lg shadow-md">
+                </div>
+                <div data-animate="fade-in-left">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-700 mb-4">At TST Civil Engineering, our mission is to provide innovative and sustainable civil engineering solutions that improve the quality of life for communities. We are committed to excellence in design, construction, and project management.</p>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Values</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Integrity: We conduct our business with the highest ethical standards.</li>
+                        <li>Quality: We are dedicated to delivering exceptional quality in every project.</li>
+                        <li>Sustainability: We prioritize environmentally responsible solutions.</li>
+                        <li>Innovation: We embrace new technologies and approaches to solve complex challenges.</li>
+                        <li>Collaboration: We work closely with our clients and partners to achieve shared goals.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Section -->
+     <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8" data-animate="fade-in">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-animate="fade-in-right">
+                    <p class="text-gray-700 mb-4">We'd love to hear from you!  Please fill out the form below to get in touch with our team.  You can also reach us by phone or email.</p>
+                    <ul class="text-gray-700">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt text-orange-500 mr-2"></i> 123 Main Street, Anytown, USA</li>
+                        <li class="mb-2"><i class="fas fa-phone text-orange-500 mr-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope text-orange-500 mr-2"></i> info@tstcivilengineering.com</li>
+                    </ul>
+                </div>
+                <div data-animate="fade-in-left">
+                    <form class="bg-white shadow-md rounded-lg p-8">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                            <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 text-
+
+<!-- FOOTER SECTION -->
+<footer class="bg-gray-800 text-white py-12 mt-24">
+    <div class="container mx-auto px-4 md:px-8 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Company Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">TST Civil Engineering</h3>
+                <p class="text-gray-300">Building a stronger future, one project at a time. Your trusted partner in civil engineering solutions.</p>
+                <div class="mt-4">
+                    <a href="#" class="text-gray-300 hover:text-orange-500 mr-2"><i class="fab fa-facebook-square fa-lg"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-orange-500 mr-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-orange-500"><i class="fab fa-twitter-square fa-lg"></i></a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+                <ul class="list-none pl-0">
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Infrastructure Development</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Structural Engineering</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Geotechnical Engineering</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Environmental Engineering</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Construction Management</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="list-none pl-0">
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">About Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Projects</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Careers</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Contact Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-300 hover:text-orange-500">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <p class="text-gray-300 mb-2">
+                    <i class="fas fa-map-marker-alt mr-2"></i> 123 Main Street, Anytown, USA
+                </p>
+                <p class="text-gray-300 mb-2">
+                    <i class="fas fa-phone mr-2"></i> (555) 123-4567
+                </p>
+                <p class="text-gray-300 mb-2">
+                    <i class="fas fa-envelope mr-2"></i> info@tstcivil.com
+                </p>
+
+                <form class="mt-4">
+                    <label for="email" class="block text-sm font-medium text-gray-300">Subscribe to our Newsletter</label>
+                    <div class="mt-1">
+                        <input type="email" name="email" id="email" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-700 rounded-md bg-gray-700 text-white" placeholder="you@example.com">
+                    </div>
+                    <button type="submit" class="mt-2 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
+            <p>&copy; 2023 TST Civil Engineering. All rights reserved.</p>
+            <p>Designed by <a href="#" class="text-orange-500 hover:underline">Your Company</a></p>
+        </div>
+    </div>
+</footer>
+
+  </main>
+  
+  <script>
+      document.addEventListener('DOMContentLoaded',function(){
+          // Animation system
+          const observer=new IntersectionObserver(entries=>{
+              entries.forEach((entry,i)=>{
+                  if(entry.isIntersecting){
+                      setTimeout(()=>{
+                          entry.target.classList.add('visible');
+                          // Handle staggered children if using that animation style
+                          if(entry.target.getAttribute('data-animate')==='stagger'){
+                              Array.from(entry.target.children).forEach((child,childIndex)=>{
+                                  child.style.setProperty('--child-index',childIndex);
+                              });
+                          }
+                      },i*100);
+                      observer.unobserve(entry.target);
+                  }
+              });
+          },{threshold:0.15,rootMargin:'0px 0px -100px 0px'});
+          
+          document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
+          
+          // Fixed navigation
+          const nav=document.querySelector('nav');
+          if(nav){
+              const handleScroll=()=>{
+                  nav.classList[window.scrollY>100?'add':'remove']('nav-fixed');
+              };
+              window.addEventListener('scroll',handleScroll,{passive:true});
+              handleScroll();
+          }
+          
+          // Smooth scroll
+          document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+              anchor.addEventListener('click',function(e){
+                  e.preventDefault();
+                  const targetId=this.getAttribute('href');
+                  if(targetId==='#')return;
+                  const target=document.querySelector(targetId);
+                  if(target){
+                      const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-(nav?nav.offsetHeight:0)-20;
+                      window.scrollTo({top:targetPosition,behavior:'smooth'});
+                  }
+              });
+          });
+          
+          // Scroll progress indicator
+          const updateScrollProgress = () => {
+              const height=Math.max(
+                  document.body.scrollHeight,
+                  document.body.offsetHeight,
+                  document.documentElement.clientHeight,
+                  document.documentElement.scrollHeight,
+                  document.documentElement.offsetHeight
+              )-window.innerHeight;
+              
+              document.documentElement.style.setProperty('--scroll-progress',(window.scrollY/height*100)+'%');
+          };
+          
+          window.addEventListener('scroll', updateScrollProgress, {passive:true});
+          window.addEventListener('resize', updateScrollProgress, {passive:true});
+          updateScrollProgress();
+          
+          // Mobile menu with enhanced accessibility
+          const menuToggle=document.getElementById('mobile-menu-toggle');
+          const mobileMenu=document.getElementById('mobile-menu');
+          if(menuToggle&&mobileMenu){
+              menuToggle.addEventListener('click',()=>{
+                  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                  menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+                  mobileMenu.classList.toggle('hidden');
+                  document.body.classList.toggle('overflow-hidden');
+              });
+              
+              // Close on click outside
+              document.addEventListener('click',e=>{
+                  if(mobileMenu&&!mobileMenu.classList.contains('hidden')&&
+                      menuToggle&&!menuToggle.contains(e.target)&&!mobileMenu.contains(e.target)){
+                      mobileMenu.classList.add('hidden');
+                      document.body.classList.remove('overflow-hidden');
+                      menuToggle.setAttribute('aria-expanded', 'false');
+                  }
+              });
+              
+              // Close on escape key
+              document.addEventListener('keydown', e => {
+                  if(e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                      mobileMenu.classList.add('hidden');
+                      document.body.classList.remove('overflow-hidden');
+                      menuToggle.setAttribute('aria-expanded', 'false');
+                  }
+              });
+          }
+          
+          // Accordions
+          document.querySelectorAll('[data-accordion-target]').forEach(btn=>{
+              btn.addEventListener('click',()=>{
+                  const target=document.querySelector(btn.getAttribute('data-accordion-target'));
+                  if(target){
+                      const isExpanded=btn.getAttribute('aria-expanded')==='true';
+                      target.classList.toggle('hidden');
+                      btn.setAttribute('aria-expanded',isExpanded?'false':'true');
+                      const icon=btn.querySelector('.accordion-icon');
+                      if(icon)icon.classList.toggle('rotate-180');
+                  }
+              });
+          });
+          
+          // Form validation
+          document.querySelectorAll('form').forEach(form=>{
+              form.addEventListener('submit',function(e){
+                  let valid=true;
+                  const requiredFields=form.querySelectorAll('[required]');
+                  
+                  requiredFields.forEach(field=>{
+                      if(!field.value.trim()){
+                          valid=false;
+                          field.classList.add('border-red-500');
+                          
+                          // Add error message if not already present
+                          let errorMsg=field.parentNode.querySelector('.error-message');
+                          if(!errorMsg){
+                              errorMsg=document.createElement('p');
+                              errorMsg.className='text-red-500 text-sm mt-1 error-message';
+                              errorMsg.textContent='This field is required';
+                              field.parentNode.appendChild(errorMsg);
+                          }
+                      }else{
+                          field.classList.remove('border-red-500');
+                          const errorMsg=field.parentNode.querySelector('.error-message');
+                          if(errorMsg)errorMsg.remove();
+                      }
+                  });
+                  
+                  if(!valid){
+                      e.preventDefault();
+                  }
+              });
+          });
+          
+          // Tabs functionality if present
+          document.querySelectorAll('[data-tabs]').forEach(tabGroup=>{
+              const tabs=tabGroup.querySelectorAll('[data-tab]');
+              const tabContents=document.querySelectorAll('[data-tab-content]');
+              
+              tabs.forEach(tab=>{
+                  tab.addEventListener('click',()=>{
+                      const target=tab.getAttribute('data-tab');
+                      
+                      // Update active tab state
+                      tabs.forEach(t=>{
+                          t.classList.remove('active-tab','text-primary-600','border-primary-600');
+                          t.setAttribute('aria-selected', 'false');
+                      });
+                      tab.classList.add('active-tab','text-primary-600','border-primary-600');
+                      tab.setAttribute('aria-selected', 'true');
+                      
+                      // Show correct content
+                      tabContents.forEach(content=>{
+                          if(content.getAttribute('data-tab-content')===target){
+                              content.classList.remove('hidden');
+                          }else{
+                              content.classList.add('hidden');
+                          }
+                      });
+                  });
+              });
+          });
+          
+          // Carousels
+          document.querySelectorAll('[data-carousel]').forEach(carousel=>{
+              const slides=carousel.querySelectorAll('[data-slide]');
+              const prevBtn=carousel.querySelector('[data-carousel-prev]');
+              const nextBtn=carousel.querySelector('[data-carousel-next]');
+              
+              if(slides.length>0&&prevBtn&&nextBtn){
+                  let current=0,interval=null;
+                  
+                  slides[0].classList.remove('hidden');
+                  
+                  const updateIndicators=()=>{
+                      carousel.querySelectorAll('[data-indicator]').forEach((ind,i)=>{
+                          ind.classList[i===current?'add':'remove']('bg-primary-600');
+                          ind.classList[i!==current?'add':'remove']('bg-gray-300');
+                      });
+                  };
+                  
+                  const showSlide=idx=>{
+                      slides.forEach(s=>s.classList.add('hidden'));
+                      slides[idx].classList.remove('hidden');
+                      updateIndicators();
+                  };
+                  
+                  nextBtn.addEventListener('click',()=>{
+                      current=(current+1)%slides.length;
+                      showSlide(current);
+                  });
+                  
+                  prevBtn.addEventListener('click',()=>{
+                      current=(current-1+slides.length)%slides.length;
+                      showSlide(current);
+                  });
+                  
+                  updateIndicators();
+                  
+                  const startAuto=()=>{
+                      if(carousel.hasAttribute('data-auto')&&!interval){
+                          interval=setInterval(()=>{
+                              current=(current+1)%slides.length;
+                              showSlide(current);
+                          },5000);
+                      }
+                  };
+                  
+                  carousel.addEventListener('mouseenter',()=>{
+                      if(interval){clearInterval(interval);interval=null;}
+                  });
+                  
+                  carousel.addEventListener('mouseleave',startAuto);
+                  
+                  carousel.querySelectorAll('[data-indicator]').forEach((ind,i)=>{
+                      ind.addEventListener('click',()=>{
+                          current=i;
+                          showSlide(current);
+                      });
+                  });
+                  
+                  startAuto();
+              }
+          });
+          
+          // Initialize counters for stats sections if they exist
+          document.querySelectorAll('[data-counter]').forEach(counter=>{
+              const target=parseInt(counter.getAttribute('data-counter')||'0',10);
+              const duration=1500; // Animation duration in ms
+              const step=Math.ceil(target/50); // How much to increment per step
+              let current=0;
+              
+              const updateCounter=()=>{
+                  current+=step;
+                  if(current>target)current=target;
+                  
+                  counter.textContent=current.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',');
+                  
+                  if(current<target){
+                      requestAnimationFrame(updateCounter);
+                  }
+              };
+              
+              // Start counting when element is in view
+              const observer=new IntersectionObserver(entries=>{
+                  entries.forEach(entry=>{
+                      if(entry.isIntersecting){
+                          updateCounter();
+                          observer.unobserve(entry.target);
+                      }
+                  });
+              },{threshold:0.5});
+              
+              observer.observe(counter);
+          });
+      });
+  </script>
+</body>
+</html>

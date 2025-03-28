@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="tst - About tst">
+      <title>tst - About tst</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+        
+      /* Creative Style - Playful elements with dynamic animations */
+      body{font-family:'Poppins', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+      h1,h2,h3,h4,h5,h6{font-family:'Poppins', sans-serif}
+      section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
+      header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;min-height:500px;display:flex;align-items:center}
+      [data-animate]{opacity:0;transform:scale(.94);transition:opacity .6s ease-out,transform .6s cubic-bezier(.175,.885,.32,1.275)}[data-animate].visible{opacity:1;transform:scale(1)}
+      .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.1);transition:all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6);width:100%}
+      ::-webkit-scrollbar{width:12px;height:12px}::-webkit-scrollbar-track{background:#f5f5f5}::-webkit-scrollbar-thumb{background:hsl(270, 71%, 40%);border-radius:20px}::-webkit-scrollbar-thumb:hover{background:hsl(270, 71%, 50%)}
+      body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,hsl(270, 71%, 60%),hsl(270, 71%, 40%),hsl(270, 71%, 20%));transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+      @media print{[data-animate]{opacity:1;transform:none}}
+  
+      </style>
+    </head>
+    <body>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="/" class="flex-shrink-0">
+                    <span class="font-bold text-xl text-blue-600">TST Civil Engineering</span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="/" class="text-blue-800 hover:bg-blue-100 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+                        <a href="/about" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="/services" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="/projects" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="/contact" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-4 flex items-center md:ml-6">
+                    <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium">Get a Quote</a>
+                </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Heroicon name: outline/menu
+
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <!--
+                      Heroicon name: outline/x
+
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="text-blue-800 hover:bg-blue-100 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+            <a href="/about" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+            <a href="/services" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+            <a href="/projects" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="/contact" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+        <div class="pt-4 pb-3 border-t border-gray-200">
+            <div class="mt-3 px-2 space-y-1">
+                <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Get a Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle the icon
+                const menuIcon = mobileMenuButton.querySelector('svg:first-child');
+                const closeIcon = mobileMenuButton.querySelector('svg:last-child');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        });
+    </script>
+</nav>
+      <header class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4 py-12">
+          <h1 class="text-3xl font-bold">tst - About tst</h1>
+        </div>
+      </header>
+      <main class="container mx-auto px-4 py-8">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About TST - Civil Engineering</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom Styles (optional - can be placed in a separate CSS file) */
+        .bg-gradient-custom {
+            background: linear-gradient(to right, rgba(56, 189, 248, 0.8), rgba(14, 165, 233, 0.8));
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-blue-700">
+                TST Civil Engineering
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="/" class="hover:text-blue-500">Home</a>
+                <a href="/about.html" class="hover:text-blue-500 text-blue-700 font-semibold">About</a>
+                <a href="/services.html" class="hover:text-blue-500">Services</a>
+                <a href="/projects.html" class="hover:text-blue-500">Projects</a>
+                <a href="/contact.html" class="hover:text-blue-500">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-blue-700 hover:text-blue-500 focus:outline-none focus:shadow-outline">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden bg-gray-50 py-2 px-4">
+            <a href="/" class="block py-1 hover:text-blue-500">Home</a>
+            <a href="/about.html" class="block py-1 hover:text-blue-500 text-blue-700 font-semibold">About</a>
+            <a href="/services.html" class="block py-1 hover:text-blue-500">Services</a>
+            <a href="/projects.html" class="block py-1 hover:text-blue-500">Projects</a>
+            <a href="/contact.html" class="block py-1 hover:text-blue-500">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 md:h-screen overflow-hidden">
+        <img src="/images/gbc37fc22eebc7536319265ea846b04bfa35897fa86ad9fd55f1b2e50f7f697a7a170097b1d48993aab13113ebc34a7fcfc83f4fd7af772b4b4de9afad37de7cf_640.jpg" alt="Civil Engineering Hero" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-custom"></div>
+        <div class="relative z-10 flex items-center justify-center h-full text-white">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-shadow mb-4" data-animate="fade-in">About TST Civil Engineering</h1>
+                <p class="text-lg md:text-xl text-shadow" data-animate="fade-in" data-animate-delay="0.2s">Building a Better Future, Together.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company History -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center" data-animate="slide-in-bottom">Our History</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-animate="fade-in">
+                    <p class="text-gray-700 leading-relaxed">
+                        TST Civil Engineering was founded in 1985 by Thomas S. Thompson, a visionary engineer with a passion for innovation and sustainable development. Starting as a small firm with a handful of dedicated professionals, TST quickly gained a reputation for excellence in project delivery and client satisfaction.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        Over the years, we have expanded our services and expertise to encompass a wide range of civil engineering disciplines, including structural design, transportation engineering, environmental consulting, and construction management. Our commitment to quality and innovation has allowed us to successfully complete numerous landmark projects across the region.
+                    </p>
+                </div>
+                <div data-animate="fade-in" data-animate-delay="0.2s">
+                    <p class="text-gray-700 leading-relaxed">
+                        From the initial design phase to the final construction stage, we work closely with our clients to ensure that their vision is realized with precision and efficiency. Our team of experienced engineers, project managers, and support staff are dedicated to providing exceptional service and delivering results that exceed expectations.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        Today, TST Civil Engineering stands as a testament to the power of hard work, dedication, and a unwavering commitment to excellence. We are proud of our history and excited about the future, as we continue to build a better world, one project at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Values -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center" data-animate="slide-in-bottom">Our Mission and Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-animate="fade-in">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Our Mission</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        To provide innovative and sustainable civil engineering solutions that enhance the quality of life for communities and protect the environment. We strive to exceed our clients' expectations through exceptional service, technical expertise, and a commitment to excellence in all that we do.
+                    </p>
+                </div>
+                <div data-animate="fade-in" data-animate-delay="0.2s">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Our Values</h3>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                        <li><b>Integrity:</b> We conduct our business with honesty, transparency, and ethical principles.</li>
+                        <li><b>Innovation:</b> We embrace creativity and continuously seek new and better ways to solve complex challenges.</li>
+                        <li><b>Sustainability:</b> We are committed to designing and building projects that minimize environmental impact and promote long-term sustainability.</li>
+                        <li><b>Collaboration:</b> We foster a collaborative environment where teamwork, communication, and mutual respect are valued.</li>
+                        <li><b>Excellence:</b> We strive for excellence in all aspects of our work, from project planning to execution.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center" data-animate="slide-in-bottom">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in">
+                    <img src="/api/placeholder/400/300" alt="Team Member 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-blue-600">John Doe</h3>
+                        <p class="text-gray-600">Senior Engineer</p>
+                        <p class="text-gray-700 mt-2">John has over 15 years of experience in structural design and analysis. He is a licensed professional engineer and a member of the American Society of Civil Engineers.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in" data-animate-delay="0.2s">
+                    <img src="/api/placeholder/400/300" alt="Team Member 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-blue-600">Jane Smith</h3>
+                        <p class="text-gray-600">Project Manager</p>
+                        <p class="text-gray-700 mt-2">Jane is an experienced project manager with a proven track record of successfully delivering complex civil engineering projects on time and within budget.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in" data-animate-delay="0.4s">
+                    <img src="/api/placeholder/400/300" alt="Team Member 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-blue-600">David Lee</h3>
+                        <p class="text-gray-600">Environmental Consultant</p>
+                        <p class="text-gray-700 mt-2">David specializes in environmental impact assessments and sustainable development practices. He is passionate about protecting the environment and promoting responsible engineering solutions.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- Achievements Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center" data-animate="slide-in-bottom">Our Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-animate="fade-in">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Awards and Recognition</h3>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                        <li>Awarded "Engineering Firm of the Year" by the Regional Engineering Association in 2020 and 2022.</li>
+                        <li>Received the "Sustainable Development Award" for our innovative approach to environmental conservation in the Green Valley Project.</li>
+                        <li>Recognized by the National Infrastructure Council for excellence in project management and timely delivery of the City Bridge Reconstruction.</li>
+                    </ul>
+                </div>
+                <div data-animate="fade-in" data-animate-delay="0.2s">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Key Projects</h3>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                        <li>Completed the City Bridge Reconstruction project, enhancing safety and traffic flow for over 50,000 commuters daily.</li>
+                        <li>Successfully designed and implemented the Green Valley Project, a sustainable community development project focused on minimizing environmental impact.</li>
+                        <li>Provided structural engineering expertise for the Skyrise Tower, a landmark building in the city skyline.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-semibold mb-4">TST Civil Engineering</h4>
+                <p class="text-gray-200">Building a better future through innovative and sustainable engineering solutions.</p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="#" class="hover:text-blue-300"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="hover:text-blue-300"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="hover:text-blue-300"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                <ul class="text-gray-200">
+                    <li><a href="/" class="hover:text-blue-300">Home</a></li>
+                    <li><a href="/about.html" class="hover:text-blue-300">About</a></li>
+                    <li><a href="/services.html" class="hover:text-blue-300">Services</a></li>
+                    <li><a href="/projects.html" class="hover:text-blue-300">Projects</a></li>
+                    <li><a href="/contact.html" class="hover:text-blue-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+                <p class="text-gray-200">123 Main Street, Anytown, USA</p>
+                <p class="text-gray-200">Email: info@tstcivil.com</p>
+                <p class="text-gray-200">Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-gray-300">
+            &copy; 2024 TST Civil Engineering. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Animation on Scroll (Basic Implementation)
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll("[data-animate]");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const animation = element.dataset.animate;
+                        const delay = element.dataset.animateDelay || '0s';
+
+                        element.style.animation = `${animation} 0.8s ease-out ${delay} forwards`;
+                        observer.unobserve(element); // Animate only once
+                    }
+                });
+            }, { threshold: 0.2 }); // Adjust threshold as needed
+
+            elements.forEach(element => {
+                element.style.opacity = '0'; // Hide initially
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body>
+</html>
+      </main>
+      
+    </body>
+    </html>

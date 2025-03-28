@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="tst - Contact tst">
+      <title>tst - Contact tst</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+        
+      /* Creative Style - Playful elements with dynamic animations */
+      body{font-family:'Poppins', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+      h1,h2,h3,h4,h5,h6{font-family:'Poppins', sans-serif}
+      section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
+      header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;min-height:500px;display:flex;align-items:center}
+      [data-animate]{opacity:0;transform:scale(.94);transition:opacity .6s ease-out,transform .6s cubic-bezier(.175,.885,.32,1.275)}[data-animate].visible{opacity:1;transform:scale(1)}
+      .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.1);transition:all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6);width:100%}
+      ::-webkit-scrollbar{width:12px;height:12px}::-webkit-scrollbar-track{background:#f5f5f5}::-webkit-scrollbar-thumb{background:hsl(270, 71%, 40%);border-radius:20px}::-webkit-scrollbar-thumb:hover{background:hsl(270, 71%, 50%)}
+      body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,hsl(270, 71%, 60%),hsl(270, 71%, 40%),hsl(270, 71%, 20%));transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+      @media print{[data-animate]{opacity:1;transform:none}}
+  
+      </style>
+    </head>
+    <body>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="/" class="flex-shrink-0">
+                    <span class="font-bold text-xl text-blue-600">TST Civil Engineering</span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="/" class="text-blue-800 hover:bg-blue-100 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+                        <a href="/about" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="/services" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="/projects" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="/contact" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-4 flex items-center md:ml-6">
+                    <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium">Get a Quote</a>
+                </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Heroicon name: outline/menu
+
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <!--
+                      Heroicon name: outline/x
+
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="text-blue-800 hover:bg-blue-100 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+            <a href="/about" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+            <a href="/services" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+            <a href="/projects" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="/contact" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+        <div class="pt-4 pb-3 border-t border-gray-200">
+            <div class="mt-3 px-2 space-y-1">
+                <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Get a Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle the icon
+                const menuIcon = mobileMenuButton.querySelector('svg:first-child');
+                const closeIcon = mobileMenuButton.querySelector('svg:last-child');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        });
+    </script>
+</nav>
+      <header class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4 py-12">
+          <h1 class="text-3xl font-bold">tst - Contact tst</h1>
+        </div>
+      </header>
+      <main class="container mx-auto px-4 py-8">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TST Civil Engineering</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for Smooth Transitions and Animations */
+        .transition-opacity {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .data-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .data-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header (Consistent with Homepage) -->
+    <header class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-6 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="text-2xl font-bold">TST Civil Engineering</a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:text-orange-500 transition-colors">Home</a>
+                    <a href="/services" class="hover:text-orange-500 transition-colors">Services</a>
+                    <a href="/projects" class="hover:text-orange-500 transition-colors">Projects</a>
+                    <a href="/about" class="hover:text-orange-500 transition-colors">About Us</a>
+                    <a href="/contact" class="text-orange-500 font-semibold">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden bg-blue-800 py-2 px-4">
+            <a href="/" class="block py-1 hover:text-orange-500 transition-colors">Home</a>
+            <a href="/services" class="block py-1 hover:text-orange-500 transition-colors">Services</a>
+            <a href="/projects" class="block py-1 hover:text-orange-500 transition-colors">Projects</a>
+            <a href="/about" class="block py-1 hover:text-orange-500 transition-colors">About Us</a>
+            <a href="/contact" class="block py-1 text-orange-500 font-semibold">Contact</a>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Contact Form -->
+                <div class="data-animate">
+                    <h2 class="text-3xl font-semibold text-blue-800 mb-6">Get in Touch</h2>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone:</label>
+                            <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Phone Number">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                            <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="data-animate">
+                    <h2 class="text-3xl font-semibold text-blue-800 mb-6">Contact Information</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-gray-700">Address:</p>
+                            <p class="text-gray-600">123 Main Street, Suite 400<br>Anytown, CA 91234</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-700">Phone:</p>
+                            <p class="text-gray-600"><a href="tel:+15551234567">(555) 123-4567</a></p>
+                            <p class="text-gray-600"><a href="tel:+15559876543">(555) 987-6543</a></p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-700">Email:</p>
+                            <p class="text-gray-600"><a href="mailto:info@tstcivil.com">info@tstcivil.com</a></p>
+                            <p class="text-gray-600"><a href="mailto:support@tstcivil.com">support@tstcivil.com</a></p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-700">Business Hours:</p>
+                            <p class="text-gray-600">Monday - Friday: 8:00 AM to 5:00 PM</p>
+                            <p class="text-gray-600">Saturday: 9:00 AM to 12:00 PM</p>
+                            <p class="text-gray-600">Sunday: Closed</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-700">Map:</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.652441814485!2d-118.2436832242355!3d34.09593951934139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c63ca0100000%3A0x1234567890abcdef!2sExample%20Business!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent with Homepage) -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">TST Civil Engineering</h3>
+                <p class="text-gray-300">Providing quality civil engineering services for over 20 years.  We are committed to excellence and client satisfaction.</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="/" class="hover:text-orange-500 transition-colors">Home</a></li>
+                    <li><a href="/services" class="hover:text-orange-500 transition-colors">Services</a></li>
+                    <li><a href="/projects" class="hover:text-orange-500 transition-colors">Projects</a></li>
+                    <li><a href="/about" class="hover:text-orange-500 transition-colors">About Us</a></li>
+                    <li><a href="/contact" class="hover:text-orange-500 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                <p class="text-gray-300">123 Main Street, Suite 400<br>Anytown, CA 91234</p>
+                <p class="text-gray-300">Phone: <a href="tel:+15551234567" class="hover:text-orange-500 transition-colors">(555) 123-4567</a></p>
+                <p class="text-gray-300">Email: <a href="mailto:info@tstcivil.com" class="hover:text-orange-500 transition-colors">info@tstcivil.com</a></p>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-gray-400">
+            &copy; 2024 TST Civil Engineering. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+         // Animation on Scroll
+         const animatedElements = document.querySelectorAll('.data-animate');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target); // Stop observing after animating once
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        });
+
+        animatedElements.forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
+      </main>
+      
+    </body>
+    </html>

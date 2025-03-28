@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="tst - Services - tst">
+      <title>tst - Services - tst</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+        
+      /* Creative Style - Playful elements with dynamic animations */
+      body{font-family:'Poppins', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+      h1,h2,h3,h4,h5,h6{font-family:'Poppins', sans-serif}
+      section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
+      header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;min-height:500px;display:flex;align-items:center}
+      [data-animate]{opacity:0;transform:scale(.94);transition:opacity .6s ease-out,transform .6s cubic-bezier(.175,.885,.32,1.275)}[data-animate].visible{opacity:1;transform:scale(1)}
+      .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.1);transition:all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6);width:100%}
+      ::-webkit-scrollbar{width:12px;height:12px}::-webkit-scrollbar-track{background:#f5f5f5}::-webkit-scrollbar-thumb{background:hsl(270, 71%, 40%);border-radius:20px}::-webkit-scrollbar-thumb:hover{background:hsl(270, 71%, 50%)}
+      body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,hsl(270, 71%, 60%),hsl(270, 71%, 40%),hsl(270, 71%, 20%));transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+      @media print{[data-animate]{opacity:1;transform:none}}
+  
+      </style>
+    </head>
+    <body>
+      <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="/" class="flex-shrink-0">
+                    <span class="font-bold text-xl text-blue-600">TST Civil Engineering</span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="/" class="text-blue-800 hover:bg-blue-100 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+                        <a href="/about" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="/services" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="/projects" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="/contact" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-4 flex items-center md:ml-6">
+                    <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium">Get a Quote</a>
+                </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Heroicon name: outline/menu
+
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <!--
+                      Heroicon name: outline/x
+
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="text-blue-800 hover:bg-blue-100 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+            <a href="/about" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+            <a href="/services" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+            <a href="/projects" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="/contact" class="text-gray-600 hover:bg-blue-100 hover:text-blue-800 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+        <div class="pt-4 pb-3 border-t border-gray-200">
+            <div class="mt-3 px-2 space-y-1">
+                <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Get a Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle the icon
+                const menuIcon = mobileMenuButton.querySelector('svg:first-child');
+                const closeIcon = mobileMenuButton.querySelector('svg:last-child');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        });
+    </script>
+</nav>
+      <header class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4 py-12">
+          <h1 class="text-3xl font-bold">tst - Services - tst</h1>
+        </div>
+      </header>
+      <main class="container mx-auto px-4 py-8">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TST - Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles - Consistent Across All Pages */
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .transition-opacity {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .data-animate-hover:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header (Consistent Across All Pages) -->
+    <header class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-6 shadow-md">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <a href="/" class="text-3xl font-semibold text-orange-400">TST</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="/" class="hover:text-orange-300 transition-colors duration-200">Home</a>
+                <a href="/services" class="hover:text-orange-300 transition-colors duration-200">Services</a>
+                <a href="/projects" class="hover:text-orange-300 transition-colors duration-200">Projects</a>
+                <a href="/about" class="hover:text-orange-300 transition-colors duration-200">About Us</a>
+                <a href="/contact" class="hover:text-orange-300 transition-colors duration-200">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden bg-blue-800 py-2 px-4">
+            <a href="/" class="block py-1 hover:text-orange-300 transition-colors duration-200">Home</a>
+            <a href="/services" class="block py-1 hover:text-orange-300 transition-colors duration-200">Services</a>
+            <a href="/projects" class="block py-1 hover:text-orange-300 transition-colors duration-200">Projects</a>
+            <a href="/about" class="block py-1 hover:text-orange-300 transition-colors duration-200">About Us</a>
+            <a href="/contact" class="block py-1 hover:text-orange-300 transition-colors duration-200">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-80 md:h-96 lg:h-[500px]" style="background-image: url(/images/g814433275d946822911d97ca9e02b6cda2d234d0fea330540c11cc20d370740a495f8422134a5d69369e8b9997af0de849cbcb8af65dc6ff1f17ac0464a09bb0_640-1.jpg);">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-70"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-white text-center px-4">
+            <div>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-shadow mb-4">Our Services</h1>
+                <p class="text-lg md:text-xl text-shadow">Providing innovative and reliable civil engineering solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8 text-center">Core Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <img src="/api/placeholder/600/400" alt="Structural Design" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Structural Design</h3>
+                    <p class="text-gray-600">We offer comprehensive structural design services for buildings, bridges, and other infrastructure projects. Our team ensures safety, durability, and cost-effectiveness.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <img src="/api/placeholder/600/400" alt="Geotechnical Engineering" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Geotechnical Engineering</h3>
+                    <p class="text-gray-600">Our geotechnical services include site investigation, soil testing, foundation design, and slope stability analysis. We provide solutions for challenging ground conditions.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <img src="/api/placeholder/600/400" alt="Water Resources Management" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Water Resources Management</h3>
+                    <p class="text-gray-600">We specialize in water resources management, including hydrology studies, drainage design, stormwater management, and erosion control. We help protect and conserve water resources.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <img src="/api/placeholder/600/400" alt="Transportation Engineering" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Transportation Engineering</h3>
+                    <p class="text-gray-600">From highway design to traffic studies, we offer a full suite of transportation engineering services. We focus on safety, efficiency, and sustainability.</p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <img src="/api/placeholder/600/400" alt="Environmental Engineering" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Environmental Engineering</h3>
+                    <p class="text-gray-600">Our environmental engineering services include environmental impact assessments, remediation design, and regulatory compliance. We are committed to protecting the environment.</p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <img src="/api/placeholder/600/400" alt="Construction Management" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Construction Management</h3>
+                    <p class="text-gray-600">We provide construction management services to ensure projects are completed on time, within budget, and to the highest quality standards. Our experienced team oversees all aspects of construction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialized Services Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8 text-center">Specialized Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Specialized Service 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Bridge Inspection and Rehabilitation</h3>
+                    <p class="text-gray-600 mb-4">We offer specialized services for bridge inspection, assessment, and rehabilitation. Our team uses advanced techniques to ensure the safety and longevity of bridge structures.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Detailed Visual Inspections</li>
+                        <li>Load Rating Analysis</li>
+                        <li>Rehabilitation Design</li>
+                        <li>Construction Oversight</li>
+                    </ul>
+                </div>
+                <!-- Specialized Service 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Dam Safety and Engineering</h3>
+                    <p class="text-gray-600 mb-4">Our dam safety and engineering services include dam inspections, stability analysis, and rehabilitation design. We help ensure the safety and reliability of dam infrastructure.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Dam Inspections and Assessments</li>
+                        <li>Hydrologic and Hydraulic Analysis</li>
+                        <li>Stability Analysis</li>
+                        <li>Emergency Action Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-700 to-blue-500 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold mb-4">Ready to Get Started?</h2>
+            <p class="text-lg mb-8">Contact us today to discuss your civil engineering needs.</p>
+            <a href="/contact" class="inline-block bg-orange-500 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent Across All Pages) -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">TST</h4>
+                <p>Leading civil engineering solutions for a sustainable future.</p>
+                <p class="mt-2">123 Main Street<br>Anytown, USA 12345</p>
+                <p class="mt-2">Phone: (555) 123-4567<br>Email: info@tstengineering.com</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul>
+                    <li><a href="/" class="hover:text-orange-300 transition-colors duration-200">Home</a></li>
+                    <li><a href="/services" class="hover:text-orange-300 transition-colors duration-200">Services</a></li>
+                    <li><a href="/projects" class="hover:text-orange-300 transition-colors duration-200">Projects</a></li>
+                    <li><a href="/about" class="hover:text-orange-300 transition-colors duration-200">About Us</a></li>
+                    <li><a href="/contact" class="hover:text-orange-300 transition-colors duration-200">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Services</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-orange-300 transition-colors duration-200">Structural Design</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition-colors duration-200">Geotechnical Engineering</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition-colors duration-200">Water Resources</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition-colors duration-200">Transportation</a></li>
+                </ul>
+            </div>
+            <!-- Contact Form -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                <form>
+                    <input type="text" placeholder="Your Name" class="w-full bg-gray-700 text-gray-300 rounded-md py-2 px-3 mb-2 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <input type="email" placeholder="Your Email" class="w-full bg-gray-700 text-gray-300 rounded-md py-2 px-3 mb-2 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <textarea placeholder="Your Message" rows="3" class="w-full bg-gray-700 text-gray-300 rounded-md py-2 px-3 mb-2 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                    <button type="submit" class="bg-orange-500 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p>&copy; 2024 TST. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
+      </main>
+      
+    </body>
+    </html>
